@@ -9,7 +9,7 @@ class Queues {
         Queues() {
             FRONT = -1;
             REAR = -1;
-    }
+        }
 
         void insert() {
             int num;
@@ -20,12 +20,12 @@ class Queues {
             if ((FRONT == 0 && REAR == max -1) || (FRONT == REAR +1)) {
             cout << "\nQueue overflow\n";
             return;
-        }
+            }
     
             if (FRONT == -1) {
                 FRONT = 0;
                 REAR = 0;
-        }
+            }
             else {
                 if (REAR == max -1)
                     REAR = 0;
@@ -33,5 +33,12 @@ class Queues {
                     REAR = REAR + 1;
         }
         queue_array[REAR] = num;
+    }
+
+    void remove() {
+        if (FRONT == -1) {
+            cout << "Queue underflow\n";
+            return;
+        }
     }
 }
